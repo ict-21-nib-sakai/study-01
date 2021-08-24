@@ -8,24 +8,10 @@ public class MyMain03_1 {
         boolean flag = false;
         String str = "Programming";
 
-       System.out.println(
-           String.format("番号:%s", num)
-       );
-
-       System.out.println(
-           String.format("円周率:%s", dnum)
-       );
-
-       System.out.println(
-           String.format("アルファベット:%c", moji)
-       );
-
-       System.out.println(
-           String.format("真偽値:%s", flag)
-       );
-
-       System.out.println(
-           String.format("文字列:%s", str)
-       );
+        System.out.println("番号:" + num);
+        System.out.println("円周率:" + dnum);
+        System.out.println("アルファベット:" + moji);
+        System.out.println("真偽値:" + flag);
+        System.out.println("文字列:" + str);
     }
 }
