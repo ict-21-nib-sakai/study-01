@@ -3,6 +3,10 @@ public class SampleClass {
         sayHelloWorld();
         sayHelloName("Jane Doe");
         sayNameAndAge("Jane Doe", 20);
+
+        System.out.println(
+            getString()
+        );
     }
 
     public static void sayHelloWorld() {
@@ -23,5 +27,13 @@ public class SampleClass {
     public static void sayNameAndAge(String name, int age) {
         System.out.println("名前:" + name);
         System.out.println("年齢:" + age);
+    }
+
+    /**
+     * @param void
+     * @return String
+     */
+    public static String getString() {
+        return "HelloWorld!";
     }
 }
