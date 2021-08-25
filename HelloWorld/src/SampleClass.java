@@ -98,6 +98,7 @@ public class SampleClass {
      *
      * @param String str1
      * @param String str2
+     * @return String 連結結果
      */
     public static String plus(String str1, String str2) {
         return str1 + str2;
