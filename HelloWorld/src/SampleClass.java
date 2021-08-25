@@ -15,6 +15,18 @@ public class SampleClass {
         System.out.println(
             plus(3)
         );
+
+        System.out.println(
+            plus(10, 20)
+        );
+
+        System.out.println(
+            plus(10D, 20D)
+        );
+
+        System.out.println(
+            plus("Jane ", "Doe")
+        );
     }
 
     public static void sayHelloWorld() {
@@ -79,5 +91,15 @@ public class SampleClass {
      */
     public static double plus(double num1, double num2) {
         return num1 + num2;
+    }
+
+    /**
+     * 2つの文字列を連結する
+     *
+     * @param String str1
+     * @param String str2
+     */
+    public static String plus(String str1, String str2) {
+        return str1 + str2;
     }
 }
