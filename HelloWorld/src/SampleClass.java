@@ -58,4 +58,26 @@ public class SampleClass {
 
         return "引数に10を加算:" + (num + 10);
     }
+
+    /**
+     * 2つの整数を加算する
+     *
+     * @param int num1
+     * @param int num2
+     * @return int 加算結果
+     */
+    public static int plus(int num1, int num2) {
+        return num1 + num2;
+    }
+
+    /**
+     * 2つの浮動小数点を加算する
+     *
+     * @param double num1
+     * @param double num2
+     * @return double 加算結果
+     */
+    public static double plus(double num1, double num2) {
+        return num1 + num2;
+    }
 }
