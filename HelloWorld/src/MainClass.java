@@ -5,5 +5,11 @@ public class MainClass {
         myCar
             .speedUp()
             .run();
+
+        // 円周率を設定
+        Circle.setPi(3.14);
+
+        // 円周率を表示
+        System.out.println("円周率:" + Circle.getPi());
     }
 }
