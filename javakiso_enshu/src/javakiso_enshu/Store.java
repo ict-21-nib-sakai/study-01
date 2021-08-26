@@ -62,7 +62,7 @@ public class Store {
      */
     static void printTotalSales() {
         System.out.println(
-            String.format("全店舗の総売り上げ: %s円", Store.totalSales)
+            String.format("全店舗の総売り上げ: %,d円", Store.totalSales)
         );
     }
 }
