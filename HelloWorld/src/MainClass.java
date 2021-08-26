@@ -27,5 +27,16 @@ public class MainClass {
         System.out.println(
             rectangle.getHeight()
         );
+
+        /** 四角形その2 */
+        Rectangle rectangle2 = new Rectangle();
+
+        System.out.println(
+            rectangle2.getBase()
+        );
+
+        System.out.println(
+            rectangle2.getHeight()
+        );
     }
 }
