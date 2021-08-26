@@ -19,6 +19,15 @@ public class Rectangle {
         this.height = height;
     }
 
+    /**
+     * コンストラクタ
+     * @param void
+     */
+    Rectangle() {
+        this.base = 0;
+        this.height = 0;
+    }
+
     int getBase() {
         return base;
     }
