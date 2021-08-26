@@ -11,5 +11,10 @@ public class MainClass {
 
         // 円周率を表示
         System.out.println("円周率:" + Circle.getPi());
+
+        // 円の面積を表示
+        Circle circle = new Circle();
+        circle.setRadius(10);
+        circle.show();
     }
 }
