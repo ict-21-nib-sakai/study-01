@@ -11,5 +11,8 @@ public class MyMain04_2 {
         Store storeShibuya = new Store("渋谷店", 1000000);
 //        storeShibuya.print();
         storeShibuya.explain();
+
+        // 全店舗の総売り上げを表示
+        Store.printTotalSales();
     }
 }
