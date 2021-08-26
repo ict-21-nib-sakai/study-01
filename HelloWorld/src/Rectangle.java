@@ -24,8 +24,7 @@ public class Rectangle {
      * @param void
      */
     Rectangle() {
-        this.base = 0;
-        this.height = 0;
+        this(0, 0);
     }
 
     int getBase() {
