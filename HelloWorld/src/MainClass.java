@@ -16,5 +16,16 @@ public class MainClass {
         Circle circle = new Circle();
         circle.setRadius(10);
         circle.show();
+
+        /** 四角形 */
+        Rectangle rectangle = new Rectangle(5, 8);
+
+        System.out.println(
+            rectangle.getBase()
+        );
+
+        System.out.println(
+            rectangle.getHeight()
+        );
     }
 }
