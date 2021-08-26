@@ -8,5 +8,14 @@ public class EmployeeClient {
 
         // John Doe を退職
         employee.leave();
+
+        Employee employee2 = new Employee();
+
+        // Jane Doe を入社
+        employee2.setName("Jane Doe");
+        employee2.enter();
+
+        // Jane Doe を退職
+        employee2.leave();
     }
 }
