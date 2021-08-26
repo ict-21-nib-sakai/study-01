@@ -9,6 +9,8 @@ public class Store {
 
     /**
      * コンストラクタ
+     * @param String storeName 店舗名
+     * @param int sales 売上
      */
     public Store(String storeName, int sales) {
         this.storeName = storeName;
