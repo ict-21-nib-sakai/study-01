@@ -7,6 +7,9 @@ public class Store {
     /** 売上 */
     private int sales;
 
+    /** 全店舗の総売上 */
+    private static int totalSales = 0;
+
     /**
      * コンストラクタ
      * @param String storeName 店舗名
@@ -15,6 +18,7 @@ public class Store {
     public Store(String storeName, int sales) {
         this.storeName = storeName;
         this.sales = sales;
+        Store.totalSales += sales;
     }
 
     /**
@@ -50,6 +54,15 @@ public class Store {
                 this.getStoreName(),
                 this.getSales()
             )
+        );
+    }
+
+    /**
+     * 全店舗の売上を表示
+     */
+    static void printTotalSales() {
+        System.out.println(
+            String.format("全店舗の総売り上げ: %s円", Store.totalSales)
         );
     }
 }
