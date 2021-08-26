@@ -25,4 +25,31 @@ public class Store {
             String.format("%sの売上: %d円", this.storeName, this.sales)
         );
     }
+
+    /**
+     * @return String 店舗名
+     */
+    String getStoreName() {
+        return storeName;
+    }
+
+    /**
+     * @return int 売上
+     */
+    int getSales() {
+        return sales;
+    }
+
+    /**
+     * 店舗名と売上を表示
+     */
+    void explain() {
+        System.out.println(
+            String.format(
+                "%sの売上: %d円",
+                this.getStoreName(),
+                this.getSales()
+            )
+        );
+    }
 }
