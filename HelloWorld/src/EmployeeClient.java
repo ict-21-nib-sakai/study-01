@@ -3,7 +3,7 @@ public class EmployeeClient {
         Employee employee = new Employee();
 
         // John Doe を入社
-        employee.name = "John Doe";
+        employee.setName("John Doe");
         employee.enter();
 
         // John Doe を退職
