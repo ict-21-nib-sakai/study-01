@@ -22,15 +22,6 @@ public class Store {
     }
 
     /**
-     * 店舗名と売上を表示
-     */
-    void print() {
-        System.out.println(
-            String.format("%sの売上: %d円", this.storeName, this.sales)
-        );
-    }
-
-    /**
      * @return String 店舗名
      */
     String getStoreName() {
@@ -50,7 +41,7 @@ public class Store {
     void explain() {
         System.out.println(
             String.format(
-                "%sの売上: %d円",
+                "%sの売上: %,d円",
                 this.getStoreName(),
                 this.getSales()
             )
