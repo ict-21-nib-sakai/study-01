@@ -1,0 +1,49 @@
+/**
+ * 従業員のスーパークラス
+ */
+public class GeneralEmployee {
+    /** 氏名 */
+    private String name;
+
+    /** 年齢 */
+    private int age;
+
+    /** 性別 */
+    private String gender;
+
+    /** 基本給 */
+    private int salary;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public int getSalary() {
+        System.out.println("GeneralEmployee.getSalary");
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+}
