@@ -3,5 +3,8 @@ public class SwitchClient {
         Television tv = new Television();
         tv.switchOn();
         tv.switchOff();
+
+        tv.volumeUp();
+        tv.volumeDown();
     }
 }
