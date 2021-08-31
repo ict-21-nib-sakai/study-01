@@ -20,7 +20,14 @@ public class ExceptionClient {
 
         // NullPointerException が投げられる
         ExceptTest test = null;
-        test.sayHello();
+
+        try {
+            test.sayHello();
+        } catch (NullPointerException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            System.out.println("finallyが呼ばれた。");
+        }
 
         System.out.println("main メソッド終了");
     }
