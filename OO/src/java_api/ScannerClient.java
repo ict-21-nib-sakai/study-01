@@ -4,40 +4,9 @@ import java.util.Scanner;
 
 public class ScannerClient {
     public static void main(String[] args) {
-//        Scanner scanner = new Scanner(System.in);
-//        String input = scanner.nextLine();
-//
-//        System.out.println("入力した文字列: " + input);
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
 
-
-//        String str1 = "Hello";
-//        String str2 = "Hello";
-//
-//        // str1 と str2 の文字列が同じかどうかを調べる
-//        if (str1 == str2) {
-//            System.out.println("str1 と str2 は同じ");
-//        } else {
-//            System.out.println("str1 と str2 は違う");
-//        }
-
-//        // この書き方はアドレスが違うので、条件分岐は false と評価される。
-//        String str3 = new String("Hello");
-//        String str4 = "Hello";
-//
-//        if (str3 == str4) {
-//            System.out.println("str3 と str4 は同じ");
-//        } else {
-//            System.out.println("str3 と str4 は違う");
-//        }
-
-        String str5 = new String("Hello");
-        String str6 = new String("Hello");
-
-        // 正しい比較方法
-        if (str5.equals(str6)) {
-            System.out.println("str5 と str6 は同じ");
-        } else {
-            System.out.println("str5 と str6 は違う");
-        }
+        System.out.println("入力した文字列: " + input);
     }
 }
