@@ -8,7 +8,7 @@ public class Item {
     private int price;
 
     /**
-     * @param name 商品名
+     * @param name  商品名
      * @param price 単価
      */
     Item(String name, int price) {
@@ -20,7 +20,11 @@ public class Item {
      * 商品名と単価を所定の形式で出力する
      */
     public void explain() {
-        // TODO
+        System.out.printf(
+                "【割引なしの商品】%s の価格: %,d円" + "\n",
+                this.name,
+                this.price
+        );
     }
 
     /**
