@@ -21,10 +21,10 @@ public class SaleItem extends Item {
      */
     public void explain() {
         System.out.printf(
-                "【割引ありの商品】%s の価格: %,d円 (割引率: %.1f)" + "\n",
-                this.getName(),
-                this.getPrice(),
-                this.discountRate
+            "【割引ありの商品】%s の価格: %,d円 (割引率: %.1f)" + "\n",
+            this.getName(),
+            (int) (this.getPrice() * this.discountRate),
+            this.discountRate
         );
     }
 }
