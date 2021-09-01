@@ -20,6 +20,9 @@ class HighAndLowTest {
 
         // check メソッドに 9 を渡したら、結果は "high" になるはず。
         assertEquals("high", highLow.check(9));
+
+        // check メソッドに11を渡したら、結果は "low" になるはず。
+        assertEquals("low", highLow.check(11));
     }
 
 }
