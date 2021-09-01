@@ -14,7 +14,12 @@ public class CollectionClass {
         // インデックス「1」の場所にデータを格納
         list.add(1, "リンゴ");
 
-        System.out.println(list.toString());
+//        System.out.println(list.toString());
+
+        // for ループで参照する書き方
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println("要素の値: " + list.get(i));
+        }
 
         //<editor-fold desc="Integer 型のリストを作る">
         List<Integer> intList = new ArrayList<>();
