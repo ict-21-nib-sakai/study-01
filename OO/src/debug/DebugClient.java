@@ -11,11 +11,16 @@ public class DebugClient {
         System.out.println(num1 + num2);
         System.out.println(num1 * num2);
 
-        int[] data = {1, 2, 3};
+        try {
+            int[] data = {1, 2, 3};
 
-        // わざと配列の範囲外を参照するバグ付きプログラム
-        for (int i = 0; i < 4; i++) {
-            System.out.println("要素の値: " + data[i]);
+            // わざと配列の範囲外を参照するバグ付きプログラム
+            for (int i = 0; i < 4; i++) {
+                System.out.println("要素の値: " + data[i]);
+            }
+        } catch (IndexOutOfBoundsException e) {
+            // Catch ブロックで何も書かないことを「例外の握りつぶし」という。
+            // 例外は握りつぶさない。
         }
     }
 }
