@@ -15,5 +15,15 @@ public class CollectionClass {
         list.add(1, "リンゴ");
 
         System.out.println(list.toString());
+
+        //<editor-fold desc="Integer 型のリストを作る">
+        List<Integer> intList = new ArrayList<>();
+
+        // List<Integer> としておくことで、基本データ型を代入できる
+        intList.add(12);
+        intList.add(new Integer(50));
+
+        System.out.println(intList);
+        //</editor-fold>
     }
 }
