@@ -19,8 +19,8 @@ public class DebugClient {
                 System.out.println("要素の値: " + data[i]);
             }
         } catch (IndexOutOfBoundsException e) {
-            // Catch ブロックで何も書かないことを「例外の握りつぶし」という。
-            // 例外は握りつぶさない。
+            // 例外が起きた場合、スタックトレースを表示する。
+            e.printStackTrace();
         }
     }
 }
