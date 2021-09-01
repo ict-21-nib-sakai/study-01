@@ -65,6 +65,11 @@ public class CollectionClass {
             System.out.println("商品名: " + map.get(code));
             System.out.println("--------------------------");
         }
+
+        // List の場合は、順番が維持されるが、
+        // Map の場合は、順番が維持されない。(偶然同じ順番になることがあるかもしれないが)
+        // ここはPHPとは違うようだ。
+
         //</editor-fold>
     }
 }
