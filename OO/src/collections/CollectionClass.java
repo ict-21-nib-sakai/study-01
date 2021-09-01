@@ -16,9 +16,14 @@ public class CollectionClass {
 
 //        System.out.println(list.toString());
 
-        // for ループで参照する書き方
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println("要素の値: " + list.get(i));
+//        // for ループで参照する書き方
+//        for (int i = 0; i < list.size(); i++) {
+//            System.out.println("要素の値: " + list.get(i));
+//        }
+
+        // 拡張 for (foreach) での書き方
+        for (String value : list) {
+            System.out.println("要素の値: " + value);
         }
 
         //<editor-fold desc="Integer 型のリストを作る">
