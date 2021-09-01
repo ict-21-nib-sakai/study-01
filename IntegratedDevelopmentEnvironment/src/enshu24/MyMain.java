@@ -42,9 +42,9 @@ public class MyMain {
 
         System.out.println("マップの表示");
 
-        for (int i = 1; i <= input_times; i++) {
+        for (String key : items.keySet()) {
             System.out.println(
-                items.get(Integer.toString(i)).toString()
+                items.get(key).toString()
             );
         }
     }
