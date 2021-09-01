@@ -1,7 +1,9 @@
 package collections;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class CollectionClass {
     public static void main(String[] args) {
@@ -34,6 +36,21 @@ public class CollectionClass {
         intList.add(new Integer(50));
 
         System.out.println(intList);
+        //</editor-fold>
+
+        //<editor-fold desc="Map Key:Value の追加">
+        // Integer がキー、String が値のMapを作った。
+        Map<Integer, String> map = new HashMap<>();
+        map.put(1, "バナナ");
+        map.put(2, "リンゴ");
+        map.put(3, "イチゴ");
+
+        // キー「1」のすり替え
+        String oldValue = map.put(1, "マンゴー");
+
+        System.out.println("書き換わる前の値: " + oldValue);
+
+        System.out.println("mapの中身" + map);
         //</editor-fold>
     }
 }
