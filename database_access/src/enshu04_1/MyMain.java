@@ -41,6 +41,10 @@ public class MyMain {
 
             /** SQL (INSERT) の実行結果 */
             int rs = ps.executeUpdate();
+
+            if (1 == rs) {
+                System.out.println("レコードの登録が完了しました。");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
