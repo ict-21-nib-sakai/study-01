@@ -1,4 +1,4 @@
-package enshu06_1;
+package enshu03_1;
 
 import java.sql.*;
 
