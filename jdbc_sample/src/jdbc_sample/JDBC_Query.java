@@ -7,9 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class JDBC_Query {
-
     public static void main(String[] args) {
-        // TODO 自動生成されたメソッド・スタブ
         String url = "jdbc:postgresql://localhost/jdbc";//接続文字列
         String user = "jdbc";
         String password = "jdbc";
@@ -29,6 +27,14 @@ public class JDBC_Query {
 
                 //SQL（SELECT）の実行と、結果セットの取得
                 ResultSet rs = ps.executeQuery();
+
+                // 結果セットから、カーソルがポイントする行の列の値を取り出して、
+                // 画面に出力
+                while (rs.next()) {
+                    System.out.println("dept_id: " + rs.getInt("dept_id") + ",");
+                    System.out.println("dept_name:" + rs.getString("dept_name"));
+                }
+
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -37,5 +43,4 @@ public class JDBC_Query {
         }
         System.out.println("プログラム、実行成功");
     }
-
 }
