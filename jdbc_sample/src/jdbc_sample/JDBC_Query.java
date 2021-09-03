@@ -11,7 +11,7 @@ public class JDBC_Query {
         String url = "jdbc:postgresql://localhost/jdbc";//接続文字列
         String user = "jdbc";
         String password = "jdbc";
-        String sql = "SELECT * FROM department";
+        String sql = "SELECT * FROM department WHERE dept_id = ?";
 
         try {
             Class.forName("org.postgresql.Driver");
@@ -24,6 +24,9 @@ public class JDBC_Query {
         try (Connection con = DriverManager.getConnection(url, user, password)) {
             //SQL実行オブジェクトの取得
             try (PreparedStatement ps = con.prepareStatement(sql)) {
+
+                // sql の 1番目に出現した「?」に「1」を代入する
+                ps.setInt(1, 1);
 
                 //SQL（SELECT）の実行と、結果セットの取得
                 ResultSet rs = ps.executeQuery();
