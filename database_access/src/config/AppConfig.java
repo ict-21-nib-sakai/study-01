@@ -27,7 +27,10 @@ public class AppConfig {
     /**
      * @return データベースへの接続情報
      */
-    public static Connection ConnectDatabase() throws SQLException {
+    public static Connection ConnectDatabase() throws SQLException, ClassNotFoundException {
+        // JDBCドライバの読み込み
+        Class.forName("org.postgresql.Driver");
+
         // 接続済みの場合は、キャッシュしている値を返す
         if (AppConfig.database_connection != null) {
             return AppConfig.database_connection;
