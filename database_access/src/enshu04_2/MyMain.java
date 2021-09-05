@@ -3,7 +3,6 @@ package enshu04_2;
 import config.AppConfig;
 
 import java.sql.*;
-import java.time.LocalDateTime;
 
 public class MyMain {
     public static void main(String[] args) {
@@ -33,9 +32,6 @@ public class MyMain {
 
             /** SQL 実行オブジェクト */
             PreparedStatement ps = con.prepareStatement(sql);
-
-            LocalDateTime now = LocalDateTime.now();
-            Timestamp time = Timestamp.valueOf(now);
 
             // 「?」を置換
             for (Employee employee : employees) {
