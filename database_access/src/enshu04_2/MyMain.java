@@ -1,5 +1,7 @@
 package enshu04_2;
 
+import config.AppConfig;
+
 import java.sql.*;
 import java.time.LocalDateTime;
 
@@ -12,10 +14,6 @@ public class MyMain {
             e.printStackTrace();
         }
 
-        final String url = "jdbc:postgresql://localhost/jdbc";
-        final String user = "jdbc";
-        final String password = "jdbc";
-
         /** 2名の従業員を登録する */
         Employee[] employees = {
             new Employee(2001, "Hanako SATO", 3),
@@ -23,7 +21,7 @@ public class MyMain {
         };
 
         // データベースへの接続
-        try (Connection con = DriverManager.getConnection(url, user, password)) {
+        try (Connection con = AppConfig.ConnectDatabase()) {
             final String sql =
                 "INSERT INTO employee (" +
                     "  emp_id" +
