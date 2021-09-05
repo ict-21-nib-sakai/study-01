@@ -25,6 +25,8 @@ max_line_length = 80
 # [lib/**.js]
 # [{package.json,.travis.yml}]
 
+[*.{yml,yaml}]
+indent_size = 2
 
 # Universal Properties - те, что для всех форматов файлов
 #
