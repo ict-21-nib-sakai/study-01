@@ -10,13 +10,6 @@ import java.time.LocalDateTime;
  */
 public class MyMain {
     public static void main(String[] args) {
-        // JDBCドライバの読み込み
-        try {
-            Class.forName("org.postgresql.Driver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
         // データベースへの接続
         try (Connection con = AppConfig.ConnectDatabase()) {
             final String sql =
@@ -44,7 +37,7 @@ public class MyMain {
             if (1 == result) {
                 System.out.println("レコードの更新が完了しました。");
             }
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }

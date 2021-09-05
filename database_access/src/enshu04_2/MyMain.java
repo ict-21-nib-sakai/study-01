@@ -6,13 +6,6 @@ import java.sql.*;
 
 public class MyMain {
     public static void main(String[] args) {
-        // JDBCドライバの読み込み
-        try {
-            Class.forName("org.postgresql.Driver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
         /** 2名の従業員を登録する */
         Employee[] employees = {
             new Employee(2001, "Hanako SATO", 3),
@@ -45,7 +38,7 @@ public class MyMain {
             }
 
             System.out.println("レコードの登録が完了しました。");
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }

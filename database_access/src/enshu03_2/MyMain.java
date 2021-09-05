@@ -6,13 +6,6 @@ import java.sql.*;
 
 public class MyMain {
     public static void main(String[] args) {
-        // JDBCドライバの読み込み
-        try {
-            Class.forName("org.postgresql.Driver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
         // データベースへの接続
         try (Connection con = AppConfig.ConnectDatabase()) {
             final String sql =
@@ -41,7 +34,7 @@ public class MyMain {
                     rs.getTimestamp("registered_date")
                 );
             }
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
