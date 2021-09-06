@@ -30,22 +30,7 @@ public class EmployeeDAO extends DAO {
             return null;
         }
 
-        Employee employee = new Employee();
-        employee
-            .setEmp_id(rs.getInt("emp_id"))
-            .setEmp_name(rs.getString("emp_name"))
-            .setDept_id(rs.getInt("dept_id"))
-            .setRegistered_date(rs.getTimestamp("registered_date"))
-        ;
-
-        Department department = new Department();
-        department
-            .setDept_id(rs.getInt("dept_id"))
-            .setDept_name(rs.getString("dept_name"));
-
-        employee.setDepartment(department);
-
-        return employee;
+        return EmployeeDAO.makeEmployee(rs);
     }
 
     /**
@@ -65,26 +50,35 @@ public class EmployeeDAO extends DAO {
         final List<Employee> employees = new ArrayList<>();
 
         while (rs.next()) {
-            final Employee employee = new Employee();
-            employee
-                .setEmp_id(rs.getInt("emp_id"))
-                .setEmp_name(rs.getString("emp_name"))
-                .setDept_id(rs.getInt("dept_id"))
-                .setRegistered_date(rs.getTimestamp("registered_date"))
-            ;
-
-            final Department department = new Department();
-            department
-                .setDept_id(rs.getInt("dept_id"))
-                .setDept_name(rs.getString("dept_name"))
-            ;
-
-            employee.setDepartment(department);
-
+            Employee employee = EmployeeDAO.makeEmployee(rs);
             employees.add(employee);
         }
 
         return employees;
     }
 
+    /**
+     * 従業員テーブルの ResultSet から Employee オブジェクトを返す
+     *
+     * @param rs 従業員テーブルへ問い合わせ結果
+     */
+    private static Employee makeEmployee(ResultSet rs) throws SQLException {
+        final Employee employee = new Employee();
+        employee
+            .setEmp_id(rs.getInt("emp_id"))
+            .setEmp_name(rs.getString("emp_name"))
+            .setDept_id(rs.getInt("dept_id"))
+            .setRegistered_date(rs.getTimestamp("registered_date"))
+        ;
+
+        final Department department = new Department();
+        department
+            .setDept_id(rs.getInt("dept_id"))
+            .setDept_name(rs.getString("dept_name"))
+        ;
+
+        employee.setDepartment(department);
+
+        return employee;
+    }
 }
