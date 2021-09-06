@@ -1,8 +1,6 @@
 package enshu06_2;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class EmployeeDAO extends DAO {
 //    /**
