@@ -17,7 +17,6 @@ public class MyMain {
                     " SET " +
                     "  emp_name = ?" +
                     ", dept_id = ?" +
-                    ", registered_date = ?" +
                     " WHERE emp_id = ?";
 
             /** SQL 実行オブジェクト */
@@ -29,8 +28,7 @@ public class MyMain {
             // 「?」を置換
             ps.setString(1, "Taro URASHIMA");
             ps.setInt(2, 1);
-            ps.setTimestamp(3, time);
-            ps.setInt(4, 1001);
+            ps.setInt(3, 1001);
 
             int result = ps.executeUpdate();
 
