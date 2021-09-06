@@ -32,7 +32,7 @@ public class EmployeeDAO {
             DB_USER,
             DB_PASSWORD
         )) {
-            try (PreparedStatement ps = con.prepareStatement(sql);) {
+            try (PreparedStatement ps = con.prepareStatement(sql)) {
                 ResultSet rs = ps.executeQuery();
 
                 while (rs.next()) {
