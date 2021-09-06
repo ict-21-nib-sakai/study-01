@@ -21,10 +21,10 @@ public class EmployeeDAO extends DAO {
             " WHERE emp_id = ? "
         ;
 
-        PreparedStatement ps = con.prepareStatement(sql);
+        final PreparedStatement ps = con.prepareStatement(sql);
         ps.setInt(1, emp_id);
 
-        ResultSet rs = ps.executeQuery();
+        final ResultSet rs = ps.executeQuery();
 
         if (!rs.next()) {
             return null;
