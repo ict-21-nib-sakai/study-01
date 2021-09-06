@@ -8,7 +8,7 @@ public class EmployeeDAO extends DAO {
     /**
      * 指定した主キーを持つ従業員を返す
      *
-     * @param emp_id 授業員ID
+     * @param emp_id 従業員ID
      */
     public Employee findById(int emp_id) throws SQLException {
         Connection con = EmployeeDAO.Connect();
