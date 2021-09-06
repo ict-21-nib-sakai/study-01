@@ -10,6 +10,7 @@ public class Client {
     public static void main(String[] args) {
         EmployeeDAO dao = new EmployeeDAO();
 
+        //<editor-fold desc="findById の実行確認">
         try {
             Employee employee = dao.findById(1002);
 
@@ -26,5 +27,6 @@ public class Client {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        //</editor-fold>
     }
 }
