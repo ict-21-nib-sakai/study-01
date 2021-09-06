@@ -8,15 +8,17 @@ public class Department {
         return dept_id;
     }
 
-    public void setDept_id(int dept_id) {
+    public Department setDept_id(int dept_id) {
         this.dept_id = dept_id;
+        return this;
     }
 
     public String getDept_name() {
         return dept_name;
     }
 
-    public void setDept_name(String dept_name) {
+    public Department setDept_name(String dept_name) {
         this.dept_name = dept_name;
+        return this;
     }
 }
