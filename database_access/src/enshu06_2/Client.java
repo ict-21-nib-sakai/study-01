@@ -11,11 +11,11 @@ public class Client {
         EmployeeDAO dao = new EmployeeDAO();
 
         //<editor-fold desc="findById の実行確認">
-        try {
+        label: try {
             Employee employee = dao.findById(1002);
 
             if (null == employee) {
-                return;
+                break label;
             }
 
             System.out.println("emp_id: " + employee.getEmp_id());
