@@ -13,7 +13,7 @@ import java.io.PrintWriter;
  *
  * Servlet implementation class HelloServlet
  */
-@WebServlet(name = "enshu01_1/hello", urlPatterns = {"/enshu01_1/hello"})
+@WebServlet("/enshu01_1/hello")
 public class HelloServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
