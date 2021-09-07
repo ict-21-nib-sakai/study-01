@@ -33,6 +33,9 @@ public class MyParamServlet extends HttpServlet {
         final String loginId = request.getParameter("loginId");
         final String password = request.getParameter("password");
 
+        // チェックボックスの値を取得する
+        String[] colors = request.getParameterValues("color");
+
         PrintWriter writer = response.getWriter();
         writer.println("<!DOCTYPE html>\n" +
             "<html lang=\"ja\">\n" +
@@ -43,7 +46,15 @@ public class MyParamServlet extends HttpServlet {
             "<body>\n" +
             // 画面で入力した内容を表示
             "<h1>" + loginId + "</h1>" +
-            "<h1>" + password + "</h1>" +
+            "<h1>" + password + "</h1>"
+        );
+
+        // チェックボックスでチェックした色を表示
+        for (String color : colors) {
+            writer.println("<h1>" + color + "</h1>");
+        }
+
+        writer.println(
             "</body>\n" +
             "</html>"
         );
