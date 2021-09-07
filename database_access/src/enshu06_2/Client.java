@@ -69,17 +69,7 @@ public class Client {
 
         // 複数の従業員を登録
         try {
-            /** 登録された従業員 */
-            List<Employee> insertedEmployees = dao.insert(employees);
-
-            for (Employee insertedEmployee : insertedEmployees) {
-                System.out.println("emp_id: " + insertedEmployee.getEmp_id());
-                System.out.println("emp_name: " + insertedEmployee.getEmp_name());
-                System.out.println("dept_id: " + insertedEmployee.getDept_id());
-                System.out.println("dept_name: " + insertedEmployee.getDepartment().getDept_name());
-                System.out.println("registered_date: " + insertedEmployee.getRegistered_date());
-                System.out.println("-------------------------");
-            }
+            dao.insert(employees);
         } catch (SQLException e) {
             e.printStackTrace();
         }
