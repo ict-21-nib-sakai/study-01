@@ -61,7 +61,7 @@ public class EmployeeDAO extends DAO {
     /**
      * 1件から複数の従業員を登録する
      */
-    public List<Employee> insert(List<Employee> employees) throws SQLException {
+    public void insert(List<Employee> employees) throws SQLException {
         final Connection con;
 
         label:
@@ -75,8 +75,6 @@ public class EmployeeDAO extends DAO {
             // データベース接続失敗
             throw e;
         }
-
-        final List<Employee> insertedEmployee = new ArrayList<>();
 
         try {
             // 自動コミットモードを無効にする。
@@ -104,9 +102,6 @@ public class EmployeeDAO extends DAO {
                 final Employee saved = this.findById(
                     employee.getEmp_id()
                 );
-
-                // 戻り値用のリスト変数にINSERTの結果を追加する
-                insertedEmployee.add(saved);
             }
 
             // すべてうまく登録できたので、トランザクションをコミットする。
@@ -116,8 +111,6 @@ public class EmployeeDAO extends DAO {
             con.rollback();
             throw e;
         }
-
-        return insertedEmployee;
     }
 
     /**
