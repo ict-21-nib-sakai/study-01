@@ -29,12 +29,18 @@ public class MyParamServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO GET及びPOST処理をまとめて記述
 
+        //リクエストオブジェクトに文字コードを設定
+        request.setCharacterEncoding("UTF-8");
+
         // ログインIDとパスワードを取り出す
         final String loginId = request.getParameter("loginId");
         final String password = request.getParameter("password");
 
         // チェックボックスの値を取得する
         String[] colors = request.getParameterValues("color");
+
+        //コンテンツタイプを設定
+        response.setContentType("text/html; charset=UTF-8");
 
         PrintWriter writer = response.getWriter();
         writer.println("<!DOCTYPE html>\n" +
