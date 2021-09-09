@@ -34,6 +34,16 @@ public class CollaboServlet extends HttpServlet {
         /** 転送用オブジェクト */
         RequestDispatcher dip = request.getRequestDispatcher(path);
 
+        // ここでは仮定として、データベースから Employee のインスタンスを取得してきたものとして書いています。
+        Employee employee = new Employee();
+        employee
+            .setEmp_id("A01")
+            .setEmp_name("Jane Doe")
+        ;
+
+        // JSP に引き渡す値をセット
+        request.setAttribute("emp_key", employee);
+
         // 指定したPathに転送
         dip.forward(request, response);
     }
