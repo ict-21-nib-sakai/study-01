@@ -1,5 +1,7 @@
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -36,6 +38,27 @@ public class TriangleServlet extends HttpServlet {
             .setHeight(30)
         ;
 
+        // 三角形クラスを2つリストに代入
+        List<Triangle> triangles = new ArrayList<>();
+
+        // 1つ目
+        Triangle triangle1 = new Triangle();
+        triangle1
+            .setBase(5)
+            .setHeight(8)
+        ;
+
+        triangles.add(triangle1);
+
+        // 2つ目
+        Triangle triangle2 = new Triangle();
+        triangle2
+            .setBase(11)
+            .setHeight(13)
+        ;
+
+        triangles.add(triangle2);
+
         /** 転送用オブジェクト */
         RequestDispatcher dispatcher = request.getRequestDispatcher(
             "/WEB-INF/triangle.jsp"
@@ -43,6 +66,7 @@ public class TriangleServlet extends HttpServlet {
 
         // ビューに値を渡す
         request.setAttribute("triangle", triangle);
+        request.setAttribute("triangles", triangles);
 
         // 指定した Path に転送
         dispatcher.forward(request, response);
