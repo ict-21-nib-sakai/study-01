@@ -1,7 +1,5 @@
 package servlet.enshu08_2;
 
-import java.io.IOException;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,18 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
 /**
  * Servlet implementation class ResultSevlet
  */
 @WebServlet(name = "enshu08_2/result", urlPatterns = {"/enshu08_2/result"})
-public class ResultSevlet extends HttpServlet {
+public class ResultServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ResultSevlet() {
+    public ResultServlet() {
         super();
     }
 
