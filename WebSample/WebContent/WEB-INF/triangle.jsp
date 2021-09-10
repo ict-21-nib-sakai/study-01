@@ -19,5 +19,12 @@
         <c:out value="${triangle.base}"></c:out>
         <br>
     </c:forEach>
+
+    <h1>変数 score の判定 (c:if)</h1>
+    <%--@elvariable id="score" type=""--%>
+    <c:if test="${score >= 90}">
+        <p>90点以上です！</p>
+    </c:if>
+    <p>あなたの点数： <c:out value="${score}"></c:out></p>
 </body>
 </html>

@@ -59,6 +59,8 @@ public class TriangleServlet extends HttpServlet {
 
         triangles.add(triangle2);
 
+        int score = 90;
+
         /** 転送用オブジェクト */
         RequestDispatcher dispatcher = request.getRequestDispatcher(
             "/WEB-INF/triangle.jsp"
@@ -67,6 +69,7 @@ public class TriangleServlet extends HttpServlet {
         // ビューに値を渡す
         request.setAttribute("triangle", triangle);
         request.setAttribute("triangles", triangles);
+        request.setAttribute("score", score);
 
         // 指定した Path に転送
         dispatcher.forward(request, response);
