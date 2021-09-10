@@ -1,7 +1,5 @@
 package servlet.enshu09_3;
 
-import javax.naming.Name;
-
 /**
  * 演習 9.3 EL式とJSTLの利用 (c:forEach タグ)
  */
