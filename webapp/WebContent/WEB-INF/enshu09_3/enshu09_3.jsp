@@ -3,7 +3,7 @@
     contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%--@elvariable id="employees" type="servlet.enshu09_3.Employee"--%>
+<%--@elvariable id="employees" type="java.util.List<servlet.enshu09_3.Employee>"--%>
 <!DOCTYPE html>
 <html>
 <head>
