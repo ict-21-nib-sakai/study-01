@@ -11,15 +11,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>演習 9.1 EL 式と JSTL の利用 (&lt;c:out&gt;タグ) 計算結果</title>
+<title>演習 9.1, 9.2 EL 式と JSTL の利用 (&lt;c:out&gt;タグ) 計算結果</title>
 </head>
 <body>
+    <c:if test="${result != null}">
     <h1>結果</h1>
     <c:out value="${value1}" default=""/>
     <c:out value="${operator}" default=""/>
     <c:out value="${value2}" default=""/>
     ＝
     <c:out value="${result}" default=""/>
+    </c:if>
     <a href="/webapp/enshu09_1/top">トップページに戻る</a>
 </body>
 </html>

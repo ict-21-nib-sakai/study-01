@@ -11,7 +11,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>演習 9.1 EL 式と JSTL の利用 (&lt;c:out&gt;タグ) 入力フォーム</title>
+    <title>演習 9.1, 9.2 EL 式と JSTL の利用 (&lt;c:out&gt;タグ) 入力フォーム</title>
 </head>
 <body>
 <div>
