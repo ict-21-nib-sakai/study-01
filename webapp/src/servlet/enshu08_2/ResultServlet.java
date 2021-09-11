@@ -27,6 +27,8 @@ public class ResultServlet extends HttpServlet {
      * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+
         final int value1 = Integer.parseInt(
             request.getParameter("value1")
         );
@@ -40,19 +42,19 @@ public class ResultServlet extends HttpServlet {
         double result = 0;
 
         switch (operator) {
-            case "+":
+            case "＋":
                 result = value1 + value2;;
                 break;
 
-            case "-":
+            case "－":
                 result = value1 - value2;
                 break;
 
-            case "*":
+            case "×":
                 result = value1 * value2;
                 break;
 
-            case "/":
+            case "÷":
                 result = (double)value1 / value2;
                 break;
         }
