@@ -17,19 +17,19 @@
             <input type="number" name="value1" min="0" step="1">
 
             <label>
-                ＋<input type="radio" name="operator" value="+">
+                ＋<input type="radio" name="operator" value="＋">
             </label>
 
             <label>
-                －<input type="radio" name="operator" value="-">
+                －<input type="radio" name="operator" value="－">
             </label>
 
             <label>
-                ×<input type="radio" name="operator" value="*">
+                ×<input type="radio" name="operator" value="×">
             </label>
 
             <label>
-                ÷<input type="radio" name="operator" value="/">
+                ÷<input type="radio" name="operator" value="÷">
             </label>
 
             <input type="number" name="value2" min="0" step="1">
