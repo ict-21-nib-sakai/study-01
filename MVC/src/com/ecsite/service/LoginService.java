@@ -19,7 +19,7 @@ public class LoginService {
         }
 
         // パスワードを検査
-        if (user.getPassword().equals(pass)) {
+        if (!user.getPassword().equals(pass)) {
             return null;
         }
 
