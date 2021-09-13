@@ -2,4 +2,5 @@
 /.metadata/
 /.recommenders
 /lib
+/Servers
 *.iml
