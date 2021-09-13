@@ -7,7 +7,8 @@ public class Item {
     private int itemId;
     private String name;
     private String manufacturer;
-    private int category;
+    private int categoryId;
+    private String color;
     private String String;
     private int price;
     private int stock;
@@ -22,38 +23,47 @@ public class Item {
         return this;
     }
 
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
-    public Item setName(java.lang.String name) {
+    public Item setName(String name) {
         this.name = name;
         return this;
     }
 
-    public java.lang.String getManufacturer() {
+    public String getManufacturer() {
         return manufacturer;
     }
 
-    public Item setManufacturer(java.lang.String manufacturer) {
+    public Item setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
     }
 
-    public int getCategory() {
-        return category;
+    public int getCategoryId() {
+        return categoryId;
     }
 
-    public Item setCategory(int category) {
-        this.category = category;
+    public Item setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
         return this;
     }
 
-    public java.lang.String getString() {
+    public String getColor() {
+        return color;
+    }
+
+    public Item setColor(String color) {
+        this.color = color;
+        return this;
+    }
+
+    public String getString() {
         return String;
     }
 
-    public Item setString(java.lang.String string) {
+    public Item setString(String string) {
         String = string;
         return this;
     }
