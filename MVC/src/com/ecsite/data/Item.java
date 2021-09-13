@@ -9,7 +9,6 @@ public class Item {
     private String manufacturer;
     private int categoryId;
     private String color;
-    private String String;
     private int price;
     private int stock;
     private boolean recommended;
@@ -56,15 +55,6 @@ public class Item {
 
     public Item setColor(String color) {
         this.color = color;
-        return this;
-    }
-
-    public String getString() {
-        return String;
-    }
-
-    public Item setString(String string) {
-        String = string;
         return this;
     }
 
