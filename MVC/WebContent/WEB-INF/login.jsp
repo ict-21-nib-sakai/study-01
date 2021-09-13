@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<form action="/amazon/Login" method="POST">
+<form action="/MVC/LoginServlet" method="POST">
     <input type="text" name="userid" placeholder="ユーザIDを入力してください"><br>
     <input type="password" name="pass"><br>
     <input type="submit" value="ログイン実行">
