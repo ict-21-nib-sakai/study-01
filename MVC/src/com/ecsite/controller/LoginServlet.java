@@ -27,6 +27,17 @@ public class LoginServlet extends HttpServlet {
         super();
     }
 
+    @Override
+    public void init() throws ServletException {
+        super.init();
+
+        try {
+            Class.forName("org.postgresql.Driver");
+        } catch (ClassNotFoundException e1) {
+            e1.printStackTrace();
+        }
+    }
+
     /**
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
