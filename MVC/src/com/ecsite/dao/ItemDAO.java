@@ -17,6 +17,7 @@ public class ItemDAO extends CommonDAO {
                 ResultSet resultSet = statement.executeQuery();
 
                 while (resultSet.next()) {
+                    // 商品オブジェクトを1件作る。
                     Item item = new Item();
                     item
                         .setItemId(resultSet.getInt("item_id"))
@@ -28,6 +29,9 @@ public class ItemDAO extends CommonDAO {
                         .setStock(resultSet.getInt("stock"))
                         .setRecommended(resultSet.getBoolean("recommended"))
                     ;
+
+                    // リストオブジェクトに商品を追加
+                    items.add(item);
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
