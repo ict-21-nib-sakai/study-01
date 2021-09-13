@@ -40,5 +40,12 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LoginService service = new LoginService();
         User user = service.execute(request);
+
+        if (user != null) {
+            // 商品一覧を取得し、itemList.jsp に遷移
+        } else {
+            // 認証失敗
+            doGet(request, response);
+        }
     }
 }
